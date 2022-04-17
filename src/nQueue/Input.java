@@ -15,7 +15,7 @@ public class Input {
 	private List<Integer> ns = new ArrayList();
 	
 	public Input() {
-		File file = new File("queue.in");
+		File file = new File("queen.in");
 		InputStream in = null;
 		try {
 			in = new FileInputStream(file);
@@ -24,17 +24,17 @@ public class Input {
 			number = in.read(b);
 			String s = new String(b, 0, number);
 			String ss[] = s.split("\r\n");
-			times = Integer.valueOf(ss[0]);
+			times = Integer.valueOf(ss[0].trim());
 			if (ss.length != times + 1) {
 				throw new Exception("次数，与输入的文件不符");
 			}
 			for (int i = 0; i < times; i++) {
-				ns.add(Integer.valueOf(ss[i+1]));
+				ns.add(Integer.valueOf(ss[i+1].trim()));
 			}
 			
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("没有找到queue.in");
+			System.out.println("没有找到queen.in");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (Exception e) {

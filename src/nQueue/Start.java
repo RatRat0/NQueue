@@ -12,9 +12,7 @@ public class Start {
 		for (int i = 0; i < times; i++) {
 			int n = list.get(i);
 			Solution solution = new Solution(n);
-//			Output.getOutput(n, solution.res);
 			new Output(n, solution.res);
 		}
-		System.out.println("Done");
 	}
 }

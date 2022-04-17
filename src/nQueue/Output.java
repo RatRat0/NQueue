@@ -24,7 +24,7 @@ public class Output {
 		}
 		String s = sb.toString();
 		byte b[] = s.getBytes();
-		File file = new File("queue_U201911432.out");		
+		File file = new File("queen_U201911432.out");		
 		try {
 			if (!file.exists()) {
 				file.createNewFile();
@@ -39,7 +39,4 @@ public class Output {
 		}
 	}
 	
-//	public static Output getOutput(int n, List<List<Integer>> res) {
-//		return new Output(n, res);
-//	}
 }
